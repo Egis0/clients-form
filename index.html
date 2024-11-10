@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="lt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Klientai</title>
+
+        <style>
+            #error-messages {
+                background-color: rgb(255, 232, 232);
+                border: 1px solid red;
+                color: red;
+                display: none;
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                padding: 10px 25px;
+                max-width: 250px;
+            }
+            #message {
+                border: 1px solid green;
+                color: green;
+                display: none;
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                padding: 10px 25px;
+                max-width: 250px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Naujas kliento įrašymas</h1>
+        <div class="form">
+            <ul id="error-messages"></ul>
+            <div id="message"></div>
+
+            <label for="firstname">Vardas</label>
+            <input type="text" id="firstname" required>
+
+            <label for="lastname">Pavardė</label>
+            <input type="text" id="lastname" required>
+
+            <label for="birthday">Gimimo data</label>
+            <input type="date" id="birthday" required>
+
+            <button type="submit" id="btn-submit">Įrašyti</button>
+        </div>
+        <h1>Esami klientai</h1>
+        <button type="button" id="clear-clients">Išvalyti</button>
+        <ul id="clients"></ul>
+        <script src="clients.js"></script>
+    </body>
+</html>
